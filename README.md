@@ -1,22 +1,22 @@
-qtumd-rpc.js
+tachacoind-rpc.js
 ===============
 
-A client library to connect to QTUM Core RPC in JavaScript.
+A client library to connect to TACHACOIN Core RPC in JavaScript.
 
 ## Get Started
 
-qtumd-rpc.js runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
+tachacoind-rpc.js runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
 
 ```bash
-npm install qtumd-rpc
+npm install tachacoind-rpc
 ```
 
 ## Examples
 
 ```javascript
 var run = function() {
-  var qtumcore = require('qtumcore');
-  var RpcClient = require('qtumd-rpc');
+  var tachacoincore = require('tachacoincore');
+  var RpcClient = require('tachacoind-rpc');
 
   var config = {
     protocol: 'http',
@@ -52,7 +52,7 @@ var run = function() {
         }
 
         rawtxs.map(function (rawtx) {
-          var tx = new qtumcore.Transaction(rawtx.result);
+          var tx = new tachacoincore.Transaction(rawtx.result);
           console.log('\n\n\n' + tx.id + ':', tx.toObject());
         });
 
